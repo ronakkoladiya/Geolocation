@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- map api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsnRmOZVWUlDDJo6mzFG436fChNuaocqk&libraries=places"></script>
+
+</head>
+<body>
+
+    <h1>GEOLOCATION</h1>
+
+    <div class="container container1">
+        <div class="left">
+            LATITUDE: <input type="number" id="latitude" placeholder="Latitude...">
+            LONGITUDE: <input type="number" id="longitude" placeholder="Longitude...">
+            <button class="search" onclick="showLocation()">SEARCH</button>
+            <button class="reset" onclick="resetLocation()">RESET</button>
+        </div>
+
+        <button onclick="getCurrentLocation()" class="getYlocation">GET YOUR LOCATION</button>
+    </div>
+
+    <div class="mapscreen">
+        <div id = "map" style = "width:100%; height:500px;"></div>
+    </div>
+
+    <div class="container container2">
+        <div class="left">
+            START POSITION: <span id="start" style="margin-right: 50px;"></span>
+            STOP POSITION: <span id="stop" style="margin-right: 100px;"></span>
+        </div>
+
+        <div>
+            DISTANCE: <span id="distance"></span>
+        </div>
+    </div>
+
+    <!-- js link -->
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
